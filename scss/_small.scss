@@ -1,0 +1,117 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+html {
+    height: 110%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient( to left bottom, $primaryColor, $lighterPrimary);
+    background: -moz-linear-gradient( to left bottom, $primaryColor, $lighterPrimary);
+    background: -ms-linear-gradient( to left bottom, $primaryColor, $lighterPrimary);
+    background: -o-linear-gradient( to left bottom, $primaryColor, $lighterPrimary);
+    background: linear-gradient( to left bottom, $primaryColor, $lighterPrimary);
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 20px;
+    align-items: center;
+    text-align: center;
+}
+header h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {margin: 0; font-size: 3rem;}
+h2 {margin: 0; font-size: 1rem; font-weight: normal;}
+header img {
+    max-width: 100px;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background: linear-gradient(0deg, $secondaryColor 50%, $lighterSecondary 50%);
+    font-family: $primaryFont;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 50%;
+}
+nav ul li a {
+    display: block;
+    color: #eee;
+    border-left: 1px solid rgb(255, 255, 255);
+    padding: .5rem 0;
+    text-decoration: none;
+    font-family: $primaryFont;
+    font-size: 1.2rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+nav ul li.active a {
+    background: linear-gradient(0deg, darken($secondaryColor, 50%) 50%, darken($lighterSecondary, 40%) 50%);
+    color: #fff;
+}
+nav ul li a:hover {
+    background: linear-gradient(0deg, $secondaryColor 50%, $lighterSecondary 50%);
+    color: #33353C;
+}
+/*----------- MAIN --------------*/
+
+img {
+    width: 100%;
+}
+main img {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.text-content {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    grid-template-rows: auto;
+}
+.coupon-content {
+    background-color: #fff;
+    height: 480px;
+    text-align: center;
+}
+.coupon-content img {
+    margin-top: 110px;
+    width: 400px;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: $footerColor;
+    border: 1px solid $footerBorder;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    padding: .5rem 2%;
+    text-align: center;
+    color: #33353C;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
