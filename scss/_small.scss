@@ -46,10 +46,6 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-nav ul li {
-    float: left;
-    width: 50%;
-}
 nav ul li a {
     display: block;
     color: #eee;
@@ -59,6 +55,7 @@ nav ul li a {
     font-family: $primaryFont;
     font-size: 1.2rem;
     text-align: center;
+    background: linear-gradient(0deg, $secondaryColor 50%, $lighterSecondary 50%);
 }
 nav ul li:first-child a {border-left: none;}
 nav ul li.active a {
